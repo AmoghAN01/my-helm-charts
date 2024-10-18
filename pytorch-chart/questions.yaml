@@ -1,0 +1,31 @@
+questions:
+- variable: replicaCount
+  label: "Number of PyTorch replicas"
+  description: "How many PyTorch pods should be created?"
+  type: int
+  required: true
+  default: 1
+- variable: service.type
+  label: "Service Type"
+  description: "Choose the Service type for PyTorch"
+
+  type: enum
+  options:
+    - "ClusterIP"
+    - "NodePort"
+    - "LoadBalancer"
+  required: true
+  default: "ClusterIP"
+- variable: resources.limits.cpu
+  label: "CPU Limit"
+  description: "CPU resource limit"
+  type: string
+  required: true
+  default: "2"
+- variable: resources.limits.memory
+  label: "Memory Limit"
+  description: "Memory resource limit"
+  type: string
+
+  required: true
+  default: "4Gi"

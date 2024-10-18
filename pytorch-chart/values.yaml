@@ -1,0 +1,15 @@
+replicaCount: 1
+image:
+  repository: pytorch/pytorch
+  tag: 1.10.0-cuda11.3-cudnn8-runtime
+service:
+  type: ClusterIP
+  port: 8888
+resources:
+  limits:
+    cpu: 2
+    memory: 4Gi
+  requests:
+    cpu: 1
+    memory: 2Gi
+

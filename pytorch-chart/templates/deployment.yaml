@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-pytorch
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-pytorch
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-pytorch
+    spec:
+      containers:
+      - name: pytorch
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: 8888
+        resources:
+          {{- toYaml .Values.resources | nindent 12 }}
