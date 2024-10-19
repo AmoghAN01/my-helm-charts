@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-tensorflow
+
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-tensorflow
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-tensorflow
+    spec:
+      containers:
+      - name: tensorflow
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: 8888
+        resources:
+          {{- toYaml .Values.resources | nindent 12 }}
+

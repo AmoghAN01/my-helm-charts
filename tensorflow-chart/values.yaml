@@ -1,0 +1,14 @@
+replicaCount: 1
+image:
+  repository: tensorflow/tensorflow
+  tag: 2.8.0-jupyter
+service:
+  type: ClusterIP
+  port: 8888
+resources:
+  limits:
+    cpu: 2
+    memory: 4Gi
+  requests:
+    cpu: 1
+    memory: 2Gi

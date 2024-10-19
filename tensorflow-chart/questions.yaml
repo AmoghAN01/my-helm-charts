@@ -1,0 +1,18 @@
+questions:
+- variable: replicaCount
+  label: "Number of TensorFlow replicas"
+  description: "How many TensorFlow pods should be created?"
+  type: int
+  required: true
+  default: 1
+- variable: service.type
+  label: "Service Type"
+  description: "Choose the Service type for TensorFlow"
+  type: enum
+  options:
+    - "ClusterIP"
+    - "NodePort"
+    - "LoadBalancer"
+
+  required: true
+  default: "ClusterIP"

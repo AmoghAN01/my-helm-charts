@@ -3,7 +3,7 @@ entries:
   my-nginx-chart:
   - apiVersion: v2
     appVersion: 1.21.0
-    created: "2024-10-18T16:48:11.684384126-06:00"
+    created: "2024-10-19T15:12:24.607254715-06:00"
     description: A simple Nginx deployment chart for Rancher
     digest: 03c5c288704df7c50e0fb03dceb9fc772affa5d6dd0f02f53cd5768a367dba10
     name: my-nginx-chart
@@ -13,11 +13,21 @@ entries:
   pytorch-chart:
   - apiVersion: v2
     appVersion: 1.10.0
-    created: "2024-10-18T16:48:11.684498193-06:00"
+    created: "2024-10-19T15:12:24.607369792-06:00"
     description: A Helm chart for PyTorch on Kubernetes
     digest: b9be2792a0af8672c1a0b44b31a5c9a67b921494641a76d639e2434118ea2b7d
     name: pytorch-chart
     urls:
     - pytorch-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-18T16:48:11.684202435-06:00"
+  tensorflow-chart:
+  - apiVersion: v2
+    appVersion: 2.8.0
+    created: "2024-10-19T15:12:24.607476254-06:00"
+    description: A Helm chart for TensorFlow on Kubernetes
+    digest: f1723f08e426f602d5d48894e499a03d7b678d39644a01f5de88716eeed785dd
+    name: tensorflow-chart
+    urls:
+    - tensorflow-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-10-19T15:12:24.607077176-06:00"
